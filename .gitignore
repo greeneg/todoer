@@ -26,3 +26,10 @@ go.work.sum
 
 # don't track binary
 todoer
+*/setuptool/setuptool
+
+# don't track our config file
+config/config.json
+
+# don't track our DB
+db/Todoer.db
