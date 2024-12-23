@@ -81,6 +81,7 @@ func (t *TodoerService) DeleteTodo(c *gin.Context) {
 //	@Description	Retrieve list of all todos
 //	@Tags			todo
 //	@Produce		json
+//	@Security		BasicAuth
 //	@Success		200	{object}	model.TodoList
 //	@Failure		400	{object}	model.FailureMsg
 //	@Router			/todo [get]
@@ -110,6 +111,7 @@ func (t *TodoerService) GetTodos(c *gin.Context) {
 //	@Tags			todo
 //	@Produce		json
 //	@Param			id	path int true "Todo ID"
+//	@Security		BasicAuth
 //	@Success		200	{object}	model.Todo
 //	@Failure		400	{object}	model.FailureMsg
 //	@Router			/todo/{id} [get]
@@ -143,6 +145,7 @@ func (t *TodoerService) GetTodoById(c *gin.Context) {
 //	@Produce	json
 //	@Param		id	path int true "Todo ID"
 //	@Param		status	path string true "Todo Status"
+//	@Security		BasicAuth
 //	@Success	200	{object}	model.SuccessMsg
 //	@Failure	400	{object}	model.FailureMsg
 //	@Router		/todo/{id}/{status} [put]

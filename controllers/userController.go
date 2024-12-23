@@ -190,6 +190,7 @@ func (g *TodoerService) SetUserStatus(c *gin.Context) {
 //	@Description	Retrieve list of all users
 //	@Tags			user
 //	@Produce		json
+//	@Security		BasicAuth
 //	@Success		200	{object}	model.UsersList
 //	@Failure		400	{object}	model.FailureMsg
 //	@Router			/users [get]
@@ -228,6 +229,7 @@ func (g *TodoerService) GetUsers(c *gin.Context) {
 //	@Description	Retrieve a user by their Id
 //	@Tags			user
 //	@Produce		json
+//	@Security		BasicAuth
 //	@Param			id	path int true "User ID"
 //	@Success		200	{object}	SafeUser
 //	@Failure		400	{object}	model.FailureMsg
@@ -265,6 +267,7 @@ func (g *TodoerService) GetUserById(c *gin.Context) {
 //	@Description	Retrieve a user by their UserName
 //	@Tags			user
 //	@Produce		json
+//	@Security		BasicAuth
 //	@Param			name	path	string	true	"User name"
 //	@Success		200	{object}	SafeUser
 //	@Failure		400	{object}	model.FailureMsg

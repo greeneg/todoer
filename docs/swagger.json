@@ -44,6 +44,11 @@
         },
         "/todo": {
             "get": {
+                "security": [
+                    {
+                        "BasicAuth": []
+                    }
+                ],
                 "description": "Retrieve list of all todos",
                 "produces": [
                     "application/json"
@@ -113,6 +118,11 @@
         },
         "/todo/{id}": {
             "get": {
+                "security": [
+                    {
+                        "BasicAuth": []
+                    }
+                ],
                 "description": "Retrieve a todo by its Id",
                 "produces": [
                     "application/json"
@@ -189,6 +199,11 @@
         },
         "/todo/{id}/{status}": {
             "put": {
+                "security": [
+                    {
+                        "BasicAuth": []
+                    }
+                ],
                 "description": "Updates the status field of a todo",
                 "consumes": [
                     "application/json"
@@ -279,6 +294,11 @@
         },
         "/user/id/{id}": {
             "get": {
+                "security": [
+                    {
+                        "BasicAuth": []
+                    }
+                ],
                 "description": "Retrieve a user by their Id",
                 "produces": [
                     "application/json"
@@ -314,6 +334,11 @@
         },
         "/user/name/{name}": {
             "get": {
+                "security": [
+                    {
+                        "BasicAuth": []
+                    }
+                ],
                 "description": "Retrieve a user by their UserName",
                 "produces": [
                     "application/json"
@@ -535,6 +560,11 @@
         },
         "/users": {
             "get": {
+                "security": [
+                    {
+                        "BasicAuth": []
+                    }
+                ],
                 "description": "Retrieve list of all users",
                 "produces": [
                     "application/json"
@@ -682,6 +712,9 @@
                     "type": "integer"
                 },
                 "creationDate": {
+                    "type": "string"
+                },
+                "fullName": {
                     "type": "string"
                 },
                 "lastChangedDate": {

@@ -9,7 +9,7 @@ require (
 	github.com/rs/xid v1.6.0
 	github.com/swaggo/files v1.0.1
 	github.com/swaggo/gin-swagger v1.6.0
-	github.com/swaggo/swag v1.8.12
+	github.com/swaggo/swag v1.16.4
 	golang.org/x/sys v0.20.0
 )
 

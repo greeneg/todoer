@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"os"
-	"path"
 	"path/filepath"
 	"strconv"
 
@@ -15,6 +14,7 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 
 	"github.com/greeneg/todoer/controllers"
+	_ "github.com/greeneg/todoer/docs"
 	"github.com/greeneg/todoer/globals"
 	"github.com/greeneg/todoer/helpers"
 	"github.com/greeneg/todoer/middleware"
@@ -66,19 +66,8 @@ func main() {
 	err = model.ConnectDatabase(TodoerService.ConfStruct.DbPath)
 	helpers.FatalCheckError(err)
 
-	// This will ensure that the angular files are served correctly
-	r.NoRoute(func(c *gin.Context) {
-		dir, file := path.Split(c.Request.RequestURI)
-		ext := filepath.Ext(file)
-		if file == "" || ext == "" {
-			c.File("./ui/dist/ui/index.html")
-		} else {
-			c.File("./ui/dist/ui/" + path.Join(dir, file))
-		}
-	})
-
 	// some defaults for using session support
-	r.Use(sessions.Sessions("session", cookie.NewStore(globals.Secret)))
+	r.Use(sessions.Sessions("todoer-session", cookie.NewStore(globals.Secret)))
 
 	// API
 	public := r.Group("/api/v1")

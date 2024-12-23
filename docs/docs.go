@@ -50,6 +50,11 @@ const docTemplate = `{
         },
         "/todo": {
             "get": {
+                "security": [
+                    {
+                        "BasicAuth": []
+                    }
+                ],
                 "description": "Retrieve list of all todos",
                 "produces": [
                     "application/json"
@@ -119,6 +124,11 @@ const docTemplate = `{
         },
         "/todo/{id}": {
             "get": {
+                "security": [
+                    {
+                        "BasicAuth": []
+                    }
+                ],
                 "description": "Retrieve a todo by its Id",
                 "produces": [
                     "application/json"
@@ -195,6 +205,11 @@ const docTemplate = `{
         },
         "/todo/{id}/{status}": {
             "put": {
+                "security": [
+                    {
+                        "BasicAuth": []
+                    }
+                ],
                 "description": "Updates the status field of a todo",
                 "consumes": [
                     "application/json"
@@ -285,6 +300,11 @@ const docTemplate = `{
         },
         "/user/id/{id}": {
             "get": {
+                "security": [
+                    {
+                        "BasicAuth": []
+                    }
+                ],
                 "description": "Retrieve a user by their Id",
                 "produces": [
                     "application/json"
@@ -320,6 +340,11 @@ const docTemplate = `{
         },
         "/user/name/{name}": {
             "get": {
+                "security": [
+                    {
+                        "BasicAuth": []
+                    }
+                ],
                 "description": "Retrieve a user by their UserName",
                 "produces": [
                     "application/json"
@@ -541,6 +566,11 @@ const docTemplate = `{
         },
         "/users": {
             "get": {
+                "security": [
+                    {
+                        "BasicAuth": []
+                    }
+                ],
                 "description": "Retrieve list of all users",
                 "produces": [
                     "application/json"
@@ -688,6 +718,9 @@ const docTemplate = `{
                     "type": "integer"
                 },
                 "creationDate": {
+                    "type": "string"
+                },
+                "fullName": {
                     "type": "string"
                 },
                 "lastChangedDate": {

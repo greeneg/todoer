@@ -79,6 +79,8 @@ definitions:
         type: integer
       creationDate:
         type: string
+      fullName:
+        type: string
       lastChangedDate:
         type: string
       passwordHash:
@@ -145,6 +147,8 @@ paths:
           description: Bad Request
           schema:
             $ref: '#/definitions/model.FailureMsg'
+      security:
+      - BasicAuth: []
       summary: Retrieve list of todos
       tags:
       - todo
@@ -221,6 +225,8 @@ paths:
           description: Bad Request
           schema:
             $ref: '#/definitions/model.FailureMsg'
+      security:
+      - BasicAuth: []
       summary: Retrieve a todo by its Id
       tags:
       - todo
@@ -251,6 +257,8 @@ paths:
           description: Bad Request
           schema:
             $ref: '#/definitions/model.FailureMsg'
+      security:
+      - BasicAuth: []
       summary: Update the status of a todo
       tags:
       - todo
@@ -420,6 +428,8 @@ paths:
           description: Bad Request
           schema:
             $ref: '#/definitions/model.FailureMsg'
+      security:
+      - BasicAuth: []
       summary: Retrieve a user by their Id
       tags:
       - user
@@ -443,6 +453,8 @@ paths:
           description: Bad Request
           schema:
             $ref: '#/definitions/model.FailureMsg'
+      security:
+      - BasicAuth: []
       summary: Retrieve a user by their UserName
       tags:
       - user
@@ -460,6 +472,8 @@ paths:
           description: Bad Request
           schema:
             $ref: '#/definitions/model.FailureMsg'
+      security:
+      - BasicAuth: []
       summary: Retrieve list of all users
       tags:
       - user

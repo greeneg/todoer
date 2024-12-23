@@ -34,8 +34,9 @@ type TodoList struct {
 type User struct {
 	Id              int    `json:"Id"`
 	UserName        string `json:"userName"`
-	Status          string `json:"status"`
+	FullName	string `json:"fullName"`
 	PasswordHash    string `json:"passwordHash"`
+	Status          string `json:"status"`
 	CreationDate    string `json:"creationDate"`
 	LastChangedDate string `json:"lastChangedDate"`
 }
